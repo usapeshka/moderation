@@ -6,7 +6,7 @@ def main():
     st.title("🐾 Lambda.ai + Streamlit Demo")
 
     # Model switcher
-    model = st.selectbox("Select model", ["model-alpha", "model-beta", "model-gamma"])
+    model = st.selectbox("Select model", ["llama3.2-11b-vision-instruct"])
     
     prompt = st.text_input("Enter your text prompt", "")
 
