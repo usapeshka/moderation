@@ -1,12 +1,13 @@
 import streamlit as st
 from lambda_client import call_lambda
-from utils import load_image, display_response
+from utils import load_image, display_response, get_lambda_model_ids
 
 def main():
     st.title("🐾 Lambda.ai + Streamlit Demo")
 
     # Model switcher
-    model = st.selectbox("Select model", ["llama3.2-11b-vision-instruct"])
+    list_of_models = get_lambda_model_ids()
+    model = st.selectbox("Select model", list_of_models)
     
     prompt = st.text_input("Enter your text prompt", "")
 
